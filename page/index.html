@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        svg{
+            width: 330px;
+            height: 520px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .head{
+            fill: rgb(42, 137, 225);
+            stroke: #000;
+        }
+        .head-inner{
+            fill: #fff;
+            stroke: #000;
+        }
+        .neck{
+            stroke-width: 10px;
+            stroke-linecap: round;
+            stroke: red
+        }
+        .ling{
+            fill: rgb(217,209,21);
+        }
+        .nose{
+            fill: red;
+        }
+        .nose-inner{
+            fill: #fff;
+        }
+
+        .nose-bottom,
+        .mouse,
+        .beard{
+            fill: transparent;
+            stroke: #000;
+        }
+        .eye{
+            fill: #fff;
+            stroke: #000;
+        }
+        .eyeBall{
+            fill: #000
+        }
+        .body{
+            fill:rgb(42, 137, 225);;
+            stroke: #000;
+        }
+        .body-inner{
+            stroke: #000'
+        }
+        .left-hand,
+        .right-hand{
+            fill: #fff;
+            stroke: #000;
+        }
+        .left-foot,
+        .right-foot,
+        .ling-line,
+        .pocket{
+            fill: #fff;
+            stroke: #000;
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <!-- 先来头 -->
+        <path d="M 80 280 A 110 110 0 1 1 240 280" class="head"></path>
+        <path d="M 95 280 A 80 70 0 1 1 225 280" class="head-inner"></path>
+        <!-- 眼睛 -->
+        <ellipse cx='140' cy='160' rx='20' ry='30' class="eye"></ellipse>
+        <ellipse cx='180' cy='160' rx='20' ry='30' class="eye"></ellipse>
+        <!-- 眼珠子 -->
+        <circle cx="140" cy="170" r="4" class="eyeBall"></circle>
+        <circle cx="180" cy="170" r="4" class="eyeBall"></circle>
+        <!-- 鼻子 -->
+        <circle cx="160" cy="190" r="10" class="nose"></circle>
+        <circle cx="163" cy="188" r="3.5" class="nose-inner"></circle>
+        <line x1='160' y1='200' x2='160' y2='250' class="nose-bottom"></line>
+        <!-- 胡须 左边-->
+        <line x1="105" y1="200" x2="140" y2="210" class="beard"></line>
+        <line x1="100" y1="215" x2="140" y2="215" class="beard"></line>        
+        <line x1="110" y1="230" x2="140" y2="220" class="beard"></line>  
+        <!-- 胡须 右边 -->
+        <line x1="180" y1="210" x2="215" y2="200" class="beard"></line>      
+        <line x1="180" y1="215" x2="220" y2="215" class="beard"></line>      
+        <line x1="180" y1="220" x2="215" y2="230" class="beard"></line>      
+        <!-- 嘴 -->
+        <path d="M 120 235 A 60 60 0 0 0 200 235" class="mouse"></path>        
+        <!-- 脖子 -->
+        <line x1="70" y1="280" x2="250" y2="280" class="neck"></line>
+       
+
+        <!-- 身体 外形 -->
+        <polyline points='68,285 30,270 30,290 68,307 68,300 68,425 138,425 160,415 182,425 252,425 
+        252,298 252,305  290,330 290,310 252,285' class="body"></polyline>
+        <!-- <line x1='68' y1='305' x2='68' y2='300' class="body-inner"></line> -->
+        <!-- 左右手掌 -->
+        <circle cx='25' cy='277' r='15' class="left-hand"></circle>
+        <circle cx='296' cy='322' r='15' class="right-hand"></circle>
+        <!-- 左右脚掌 -->
+        <ellipse cx='103' cy='425' rx='40' ry='15' class="left-foot"></ellipse>
+        <ellipse cx='217' cy='425' rx='40' ry='15' class="left-foot"></ellipse>
+        <!-- 肚子 -->
+        <path d="M 100 285 A 70 80 0 1 0 220 285" class="head-inner"></path>
+         <!-- 铃铛  先画铃铛会被后画的身体挡掉一部分-->
+         <circle cx='160' cy='295' r='15' class="ling"></circle>
+         <circle cx='160' cy='304' r='6' class=""></circle>
+        <line x1="145" y1="292" x2="175" y2="292" class="ling-line"></line> 
+        <line x1="146" y1="290" x2="174" y2="290" class="ling-line"></line>
+        <!-- 兜兜    -->
+        <path d="M 120 335 A 40 40 0 1 0 200 335" class="pocket"></path>
+        <line x1="120" y1="335" x2="200" y2="335" class="ling-line"></line> 
+        <!-- <polygon points="120,335 200,335 " class="pocket"></polygon> -->
+    </svg>
+</body>
+</html>
